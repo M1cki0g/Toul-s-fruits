@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div id="back_image">
+      <div id="black_color">
+        <div id="navbar">
+          <h1>Toul's fruit</h1>
+
+          <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          
+          <ul id="navbar-links">
+            <li><a href="home.html">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="product.html">products</a></li>
+            
+            <a href="signin.html">
+              <button id="signin"> 
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+                <span class="circle3"></span>
+                <span class="circle4"></span>
+                <span class="circle5"></span>   
+                <span class="text">Sign in</span>
+              </button>
+            </a>
+            <a href="login.html">
+              <button id="login" >
+                <span class="circle1"></span>
+                <span class="circle2"></span>
+                <span class="circle3"></span>
+                <span class="circle4"></span>
+                <span class="circle5"></span>
+                <span class="text"> Log in</span>
+              </button>
+              </a>
+              <li id="userEmail" style="display: none;"></li>
+          <button id="logoutBtn" style="display: none;" onclick="logout()">Logout</button>
+
+          </ul>
+        </div>
+        
+        <div id="main_content">
+          <div id="fresh">
+            <div class="loader">
+              <p>Fresh &</p>
+              <div class="words">
+                <span class="word">Organic</span>
+                <span class="word">Natural</span>
+                <span class="word">Pure</span>
+                <span class="word">Well</span>
+                <span class="word">Wholesome</span>
+              </div>
+            </div>
+          </div>
+          
+          <div id="discover">
+                <h2>Discover the world of our seasonal fruits</h2>
+              </div>
+              <a href="product.html">
+                <button id="check_product">check products <i id="right" class="fa-solid fa-caret-right"></i></button>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- advantages -->
+    <div id="advantages">
+      <div id="shipping">
+        <div id="ship_ad">
+          <i id="truck" class="fa-solid fa-truck-fast"></i>
+        </div>
+        <div id="content">
+          <h2>Free shipping</h2>
+          <p>On orders over $50</p>
+        </div>
+      </div>
+      
+        <div id="shipping">
+          <div id="ship_ad">
+            <i id="support" class="fa-solid fa-question"></i>
+          </div>
+          <div id="content">
+            <h2>24/7 Support</h2>
+            <p>Get support all day</p>
+          </div>
+        </div>
+        
+        <div id="shipping">
+          <div id="ship_ad">
+            <i id="recycler" class="fa-solid fa-recycle"></i>
+          </div>
+          <div id="content">
+            <h2>Refund</h2>
+            <p>Get refund within 3 days !</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- our products -->
+      <h1 id="our_prod">Best sellers</h1>
+      <div id="product">
+        <div id="fraise">
+          <img src="fraise.jpg" alt="fraise" />
+          <h1>Fraise</h1>
+          <p>Per Kg</p> 
+          <h1>5$</h1> 
+            <button id="shop-now">Shop</button>
+          </div>
+
+            <div id="berry">
+            <img src="berry.jpg" alt="berry" />
+            <h1>berry</h1>
+            <p>Per Kg</p> 
+            <h1>5$</h1> 
+            <button id="shop-now">Shop</button>
+          </div>
+
+            <div id="banana">
+              <img src="banana-1.jpg" alt="banana" />
+              <h1>banana</h1>
+              <p>Per Kg</p> 
+              <h1>5$</h1>
+            <button id="shop-now">Shop</button>  
+          </div> 
+        </div>        
+        
+        <!-- owner of the shop -->
+        <div id="shop_owner">
+          <img src="touli.png" alt="Shop Owner">
+          <h2>Touli Yassine</h2>
+          <p>Founder & Owner</p>
+          <p class="owner_description">
+            Welcome to our shop! My name is Yassine, and I started this journey to bring quality products and excellent service to our community. Feel free to reach out with any questions!
+          </p>
+        </div>
+        
+        <!-- about -->
+
+        <div id="about">
+          <h1>We are <span style="color: rgb(255, 119, 0);">Toul's fruit</span></h1>
+          <p>
+            Welcome to Toul's Fruit, where we bring the best and 
+            freshest seasonal fruits directly to your door.
+            Our journey started with a simple vision: 
+            to offer high-quality, organic, and natural products 
+            that promote a healthy lifestyle. We believe in the power of fresh, 
+            wholesome produce and its ability to enhance well-being.
+          </p>
+        </div>
+
+        <!-- footer -->
+        <footer>
+          <p>Toul's fruit. All rights reserved.</p>
+          <p>Made with ❤️</p>
+          
+          <div class="footer-links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="products.html">Products</a></li>
+            </ul>
+          </div>
+          
+          <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </footer>
+        
+        <script src="login.js"></script>
+        <script src="signin.js"></script>
+        <script src="navbar.js"></script>
+        <script src="home.js"></script>
+      
+      
+        <!-- <script>
+          // Update button visibility based on login state
+function updateButtons() {
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  document.getElementById("login").style.display = isLoggedIn ? "none" : "inline-block";
+  document.getElementById("signin").style.display = isLoggedIn ? "none" : "inline-block";
+  document.getElementById("logoutBtn").style.display = isLoggedIn ? "inline-block" : "none";
+  
+}
+
+// Check login state on page load
+document.addEventListener("DOMContentLoaded", updateButtons());
+
+// Logout function
+function logout() {
+  localStorage.removeItem("isLoggedIn"); // Reset login state
+  updateButtons(); // Update buttons
+}
+
+        </script> -->
+      </body>
+      </html>

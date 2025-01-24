@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+
+    <link rel="stylesheet" href="product.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  </head>
+  <body>
+    <div id="back_image">
+        <div id="black_color">
+          <div id="navbar">
+            <h1>Toul's fruit</h1>
+  
+            <div class="burger" onclick="toggleMenu()">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            
+            <ul id="navbar-links">
+              <li><a href="home.html">home</a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="#products">products</a></li>
+              
+              <a href="signin.html">
+                <button id="signin"> 
+                  <span class="circle1"></span>
+                  <span class="circle2"></span>
+                  <span class="circle3"></span>
+                  <span class="circle4"></span>
+                  <span class="circle5"></span>   
+                  <span class="text">Sign in</span>
+                </button>
+              </a>
+              <a href="login.html">
+                <button id="login">
+                  <span class="circle1"></span>
+                  <span class="circle2"></span>
+                  <span class="circle3"></span>
+                  <span class="circle4"></span>
+                  <span class="circle5"></span>
+                  <span class="text"> Log in</span>
+                </button>
+                </a>
+            <button id="logoutBtn" style="display: none;" onclick="logout()">Logout</button>
+            </ul>
+          </div>
+         
+          <div id="our_products">Our Products</div>
+           <!-- Popup Modal -->
+          <div id="quantityModal" >
+            <div class="modal-content">
+           <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Choose Quantity</h2>
+        <input type="number" id="quantityInput" min="1" placeholder="Enter quantity" style="color: black;" />
+        <button onclick="confirmbtn()" id="confirm">Confirm</button>
+      </div>
+    </div>
+
+<!-- 
+          <div id="product-container">
+            <div id="fraise">
+              <img src="fraise.jpg" alt="fraise" />
+              <h1>Fraise</h1>
+              <p>Per Kg</p> 
+              <h1>5$</h1> 
+                <button id="shop-now" onclick="placeOrder()">Shop</button>
+
+              </div>
+    
+                <div id="berry">
+                <img src="berry.jpg" alt="berry" />
+                <h1>berry</h1>
+                <p>Per Kg</p> 
+                <h1>5$</h1> 
+                <button id="shop-now" onclick="placeOrder()">Shop</button>
+
+              </div>
+    
+                <div id="banana">
+                  <img src="banana-1.jpg" alt="banana" />
+                  <h1>banana</h1>
+                  <p>Per Kg</p> 
+                  <h1>5$</h1>
+                <button id="shop-now" onclick="placeOrder()">Shop</button>  
+
+              </div> 
+            </div> -->
+            
+            <div id="product-container">
+              <!-- Dynamically loaded products will be appended here -->
+            </div>
+
+        <!-- footer -->
+        <footer>
+            <p>Toul's fruit. All rights reserved.</p>
+            <p>Made with ❤️</p>
+            
+            <div class="footer-links">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="products.html">Products</a></li>
+              </ul>
+            </div>
+            
+            <div class="social-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+            </div>
+          </footer>
+
+          <script>
+           function updateButtons() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    document.getElementById("login").style.display = isLoggedIn ? "none" : "inline-block";
+    document.getElementById("signin").style.display = isLoggedIn ? "none" : "inline-block";
+    document.getElementById("logoutBtn").style.display = isLoggedIn ? "inline-block" : "none";
+  }
+
+  // function manageDeleteButtons() {
+  //   const isAdmin = localStorage.getItem("isAdmin") === "true";
+  //   const deleteButtons = document.querySelectorAll(".delete-btn");
+  //   deleteButtons.forEach(button => {
+  //     button.style.display = isAdmin ? "inline-block" : "none";
+  //   });
+  // }
+
+  // Check login state on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    updateButtons();
+    // manageDeleteButtons();
+  });
+
+  // Logout function
+  function logout() {
+    localStorage.removeItem("isLoggedIn"); // Reset login state
+    localStorage.removeItem("isAdmin"); // Reset admin state
+    updateButtons(); // Update buttons
+    manageDeleteButtons(); // Update delete buttons
+  }
+
+    </script>
+          <script src="product.js"></script>
+          <script src="orders.js"></script>
+
+              
+          
+     </body>
+</html>

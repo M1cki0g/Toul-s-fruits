@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="login_container">
+      <div id="dark">
+        <div id="login_form">
+          <h1>Log In</h1>
+          <input
+            type="text"
+            placeholder="Enter your email address"
+            id="email_login"
+          /><br />
+          <input
+            type="password"
+            placeholder="Enter your password"
+            id="passwd_login"
+          /><br />
+          <button
+            id="login_f"
+            onclick="login(document.getElementById('email_login').value, document.getElementById('passwd_login').value)"
+          >
+            Log in
+          </button>
+          <p id="message_login"></p>
+        </div>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
